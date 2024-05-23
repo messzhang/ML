@@ -17,7 +17,7 @@ class Perceptron:
         self.bias = 0
         self.errors_ = []
 
-        for _ in range(self.n_iter):
+        for _ in range(self.n_iter):#计算每一个
             errors = 0
             for xi, target in zip(X, y):
                 # 计算预测值
@@ -36,7 +36,7 @@ class Perceptron:
 
     def predict(self, X):
         """返回预测结果"""
-        return np.where(self.net_input(X) >= 0.0, 1, -1)
+        return np.where(self.net_input(X) >= 0.0, 1, -1)#判断误分点
 
 # 示例使用
 if __name__ == "__main__":
